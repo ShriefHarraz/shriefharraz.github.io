@@ -38,12 +38,9 @@
       font-size: 1.8rem;
       margin-bottom: 20px;
     }
-    /* Timeline Styling */
     .timeline-container {
       display: flex;
       overflow-x: auto;
-      padding: 20px 0;
-      scroll-snap-type: x mandatory;
       gap: 20px;
     }
     .timeline-step {
@@ -53,23 +50,23 @@
       padding: 20px;
       min-width: 250px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      flex: none;
-      scroll-snap-align: start;
-      transition: transform 0.3s ease;
-    }
-    .timeline-step:hover {
-      transform: scale(1.05);
+      cursor: pointer;
+      position: relative;
     }
     .timeline-step h4 {
       margin: 0 0 10px;
       color: #273c75;
     }
     .timeline-step p {
-      margin: 0;
+      display: none;
       font-size: 0.9rem;
       color: #636e72;
+      margin: 0;
     }
-    /* Project Section */
+    .timeline-step.active p {
+      display: block;
+      margin-top: 10px;
+    }
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -154,28 +151,28 @@
   <section data-aos="fade-up">
     <h2>My Journey</h2>
     <div class="timeline-container">
-      <div class="timeline-step">
+      <div class="timeline-step" onclick="toggleDetails(this)">
         <h4>2006–2010</h4>
-        <p>Studied Physical Education</p>
+        <p>Studied Physical Education at University</p>
       </div>
-      <div class="timeline-step">
+      <div class="timeline-step" onclick="toggleDetails(this)">
         <h4>2010–2016</h4>
-        <p>Worked as a PE Teacher</p>
+        <p>Worked as a Physical Education Teacher</p>
       </div>
-      <div class="timeline-step">
+      <div class="timeline-step" onclick="toggleDetails(this)">
         <h4>2016–2022</h4>
-        <p>Retail Supervisor – Clarks Dubai</p>
+        <p>Retail Supervisor at Clarks, Dubai</p>
       </div>
-      <div class="timeline-step">
+      <div class="timeline-step" onclick="toggleDetails(this)">
         <h4>2022</h4>
-        <p>Earned Google Data Analytics Certificate</p>
+        <p>Completed Google Data Analytics Certificate</p>
       </div>
-      <div class="timeline-step">
+      <div class="timeline-step" onclick="toggleDetails(this)">
         <h4>2023</h4>
-        <p>Joined Capi Electronics</p>
+        <p>Joined Capi Electronics in retail operations</p>
       </div>
-      <div class="timeline-step">
-        <h4>2023–Present</h4>
+      <div class="timeline-step" onclick="toggleDetails(this)">
+        <h4>2023–Now</h4>
         <p>Freelance Data Analyst</p>
       </div>
     </div>
@@ -256,6 +253,9 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 800, offset: 150 });
+    function toggleDetails(card) {
+      card.classList.toggle('active');
+    }
   </script>
 </body>
 </html>
