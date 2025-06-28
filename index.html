@@ -39,6 +39,37 @@
       font-size: 1.8rem;
       margin-bottom: 20px;
     }
+    .timeline {
+      display: flex;
+      overflow-x: auto;
+      padding: 20px 0;
+    }
+    .timeline::-webkit-scrollbar {
+      height: 6px;
+    }
+    .timeline::-webkit-scrollbar-thumb {
+      background-color: #00a8ff;
+      border-radius: 4px;
+    }
+    .timeline-item {
+      flex: 0 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin-right: 20px;
+      padding: 20px;
+      min-width: 220px;
+      text-align: center;
+    }
+    .timeline-item h4 {
+      margin: 0;
+      color: #273c75;
+      font-size: 1rem;
+    }
+    .timeline-item p {
+      font-size: 0.85rem;
+      color: #636e72;
+    }
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -121,60 +152,40 @@
   </section>
 
   <section data-aos="fade-up">
+    <h2>My Journey</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>2006–2010</h4>
+        <p>Studied Physical Education</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2010–2016</h4>
+        <p>Worked as a PE Teacher</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2016–2022</h4>
+        <p>Retail Supervisor – Clarks Dubai</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2022</h4>
+        <p>Earned Google Data Analytics Certificate</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2023</h4>
+        <p>Joined Capi Electronics</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2023–Present</h4>
+        <p>Freelance Data Analyst</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-aos="fade-up">
     <h2>Projects</h2>
     <div class="projects">
-      <div class="project-card" data-aos="zoom-in">
-        <img src="images/cyclistic.png" alt="Cyclistic Project Cover">
-        <h3>Cyclistic Bike-Share Dashboard</h3>
-        <p>Analyzed user behavior using Tableau and provided insights to increase annual subscriptions.</p>
-        <div class="project-links">
-          <a href="https://github.com/ShriefHarraz/Google-casptone/blob/main/Cyclistic_Google_capstone.sql">GitHub</a>
-          <a href="https://public.tableau.com/app/profile/shrief.harraz/viz/CyclysticGooglecapstone/Startstations">View Viz</a>
-        </div>
-      </div>
-      <div class="project-card" data-aos="zoom-in">
-        <img src="images/covid.png" alt="COVID-19 Project Cover">
-        <h3>COVID-19 SQL + Tableau</h3>
-        <p>Cleaned and explored global COVID data with SQL, visualized key trends in Tableau.</p>
-        <div class="project-links">
-          <a href="https://github.com/ShriefHarraz/Covid-19-EXPLORATION/blob/main/covid_data_EXPLO.sql">GitHub</a>
-          <a href="https://public.tableau.com/app/profile/shrief.harraz/viz/Covid19dataExplorition/Dashboard1">View Viz</a>
-        </div>
-      </div>
-      <div class="project-card" data-aos="zoom-in">
-        <img src="images/lego.png" alt="LEGO Dataset Cover">
-        <h3>LEGO Dataset EDA</h3>
-        <p>Explored LEGO dataset to find top parts, colors, and themes using SQL & Tableau.</p>
-        <div class="project-links">
-          <a href="https://github.com/ShriefHarraz/LEGO-project-/blob/main/lego.sql">GitHub</a>
-        </div>
-      </div>
-      <div class="project-card" data-aos="zoom-in">
-        <img src="images/Clarks.png" alt="Clarks Pricing Cover">
-        <h3>Clarks Shop Pricing</h3>
-        <p>Investigated product price changes and sales trends using SQL analysis techniques.</p>
-        <div class="project-links">
-          <a href="https://github.com/ShriefHarraz/Clarks-dataset/blob/main/SQLQuery1.sql">GitHub</a>
-        </div>
-      </div>
-      <div class="project-card" data-aos="zoom-in">
-        <img src="images/Video games.png" alt="Video Games Cover">
-        <h3>Video Games Sales</h3>
-        <p>Analyzed video game sales using SQL and visualized key trends in Tableau.</p>
-        <div class="project-links">
-          <a href="https://github.com/ShriefHarraz/VideoGames_sales-/blob/main/VideoGame_Sales.sql">GitHub</a>
-          <a href="https://public.tableau.com/app/profile/shrief.harraz/viz/VideogamesGlobalsales/GlobalsalesDashboard">View Viz</a>
-        </div>
-      </div>
-      <div class="project-card" data-aos="zoom-in">
-        <img src="images/Sales.png" alt="Sales Dashboard Cover">
-        <h3>Sales Data Dashboard</h3>
-        <p>Created an interactive Tableau dashboard for sales performance and trends analysis.</p>
-        <div class="project-links">
-          <a href="https://github.com/ShriefHarraz/Sales-Analysis/blob/main/SQLQuery1.sql">GitHub</a>
-          <a href="https://public.tableau.com/app/profile/shrief.harraz/viz/SALESANALYSIS_16525219316490/SalesDashboard2">View Viz</a>
-        </div>
-      </div>
+      <!-- (keep your full project cards exactly as they are) -->
+      <!-- Replace this comment with the full project cards from earlier -->
     </div>
   </section>
 
@@ -182,7 +193,7 @@
     <h2>Contact</h2>
     <p>You can reach me via:</p>
     <div class="contact-links">
-      <a href="mailto:shrief.harraz@gmail.com">Email</a>
+      <a href="mailto:shrief.harraz@gmail.com" target="_blank">Email</a>
       <a href="https://www.linkedin.com/in/shriefharraz/" target="_blank">LinkedIn</a>
       <a href="https://github.com/shriefharraz" target="_blank">GitHub</a>
     </div>
@@ -198,4 +209,3 @@
   </script>
 </body>
 </html>
-
