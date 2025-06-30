@@ -42,30 +42,46 @@
       display: flex;
       overflow-x: auto;
       gap: 20px;
+      scroll-behavior: smooth;
     }
     .timeline-step {
       background: #fff;
-      border-left: 6px solid #00a8ff;
-      border-radius: 8px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
       padding: 20px;
-      min-width: 250px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      min-width: 220px;
       cursor: pointer;
+      transition: transform 0.2s ease;
       position: relative;
     }
+    .timeline-step:hover {
+      transform: scale(1.03);
+    }
     .timeline-step h4 {
-      margin: 0 0 10px;
-      color: #273c75;
+      margin: 0;
+      color: #00a8ff;
+      font-size: 1.1rem;
     }
     .timeline-step p {
       display: none;
       font-size: 0.9rem;
-      color: #636e72;
-      margin: 0;
+      color: #555;
+      margin-top: 10px;
     }
     .timeline-step.active p {
       display: block;
-      margin-top: 10px;
+    }
+    .timeline-step::after {
+      content: "▶";
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #9c88ff;
+      font-size: 0.9rem;
+      transition: transform 0.3s ease;
+    }
+    .timeline-step.active::after {
+      transform: rotate(90deg);
     }
     .projects {
       display: grid;
@@ -152,28 +168,28 @@
     <h2>My Journey</h2>
     <div class="timeline-container">
       <div class="timeline-step" onclick="toggleDetails(this)">
-        <h4>2006–2010</h4>
-        <p>Studied Physical Education at University</p>
+        <h4>Studied Physical Education (2006–2010)</h4>
+        <p>Bachelor degree from Faculty of Physical Education, Mansoura University, Egypt.</p>
       </div>
       <div class="timeline-step" onclick="toggleDetails(this)">
-        <h4>2010–2016</h4>
-        <p>Worked as a Physical Education Teacher</p>
+        <h4>Teacher (2010–2016)</h4>
+        <p>Worked as a Physical Education Teacher in Egypt.</p>
       </div>
       <div class="timeline-step" onclick="toggleDetails(this)">
-        <h4>2016–2022</h4>
-        <p>Retail Supervisor at Clarks, Dubai</p>
+        <h4>Retail Supervisor in Dubai (2016–2022)</h4>
+        <p>Worked at Clarks Shoe Wear, managing retail teams and operations.</p>
       </div>
       <div class="timeline-step" onclick="toggleDetails(this)">
-        <h4>2022</h4>
-        <p>Completed Google Data Analytics Certificate</p>
+        <h4>Google Data Analytics (2022)</h4>
+        <p>Completed the Google Data Analytics Professional Certificate.</p>
       </div>
       <div class="timeline-step" onclick="toggleDetails(this)">
-        <h4>2023</h4>
-        <p>Joined Capi Electronics in retail operations</p>
+        <h4>Capi Electronics (2023)</h4>
+        <p>Worked in electronics retail operations and data monitoring.</p>
       </div>
       <div class="timeline-step" onclick="toggleDetails(this)">
-        <h4>2023–Now</h4>
-        <p>Freelance Data Analyst</p>
+        <h4>Freelance Data Analyst (2023–Now)</h4>
+        <p>Working with various clients to analyze data and create dashboards.</p>
       </div>
     </div>
   </section>
@@ -253,8 +269,8 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 800, offset: 150 });
-    function toggleDetails(card) {
-      card.classList.toggle('active');
+    function toggleDetails(el) {
+      el.classList.toggle('active');
     }
   </script>
 </body>
