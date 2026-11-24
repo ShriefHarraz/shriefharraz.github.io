@@ -1,277 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shrief Harraz | Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #e0f7fa, #fdfbfb);
-      color: #2f3640;
-    }
-    header {
-      background: linear-gradient(to right, #00a8ff, #9c88ff);
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.7rem;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-      color: #f1f2f6;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h2 {
-      color: #2d98da;
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-    }
-    .timeline-container {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      scroll-behavior: smooth;
-    }
-    .timeline-step {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-      padding: 20px;
-      min-width: 220px;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-      position: relative;
-    }
-    .timeline-step:hover {
-      transform: scale(1.03);
-    }
-    .timeline-step h4 {
-      margin: 0;
-      color: #00a8ff;
-      font-size: 1.1rem;
-    }
-    .timeline-step p {
-      display: none;
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 10px;
-    }
-    .timeline-step.active p {
-      display: block;
-    }
-    .timeline-step::after {
-      content: "▶";
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      color: #9c88ff;
-      font-size: 0.9rem;
-      transition: transform 0.3s ease;
-    }
-    .timeline-step.active::after {
-      transform: rotate(90deg);
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-    }
-    .project-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-      padding: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-    }
-    .project-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-    .project-card h3 {
-      margin-top: 0;
-      color: #273c75;
-    }
-    .project-card p {
-      color: #636e72;
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-    }
-    .project-links a {
-      display: inline-block;
-      background: #00a8ff;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 8px;
-      margin-right: 10px;
-      margin-top: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-    .project-links a:hover {
-      background: #0077cc;
-      transform: scale(1.05);
-    }
-    .contact-links {
-      margin-top: 20px;
-    }
-    .contact-links a {
-      color: #00a8ff;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-    footer {
-      background: linear-gradient(to right, #9c88ff, #00a8ff);
-      color: white;
-      text-align: center;
-      padding: 25px 10px;
-      font-size: 0.95rem;
-      margin-top: 40px;
-    }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shrief Harraz — Retail Operations, Inventory and Supply Chain Analytics portfolio.">
+<meta name="theme-color" content="#0b1424">
+<title>Shrief Harraz | Retail & Supply Chain Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b1424;--panel:#132239;--text:#eef4fb;--muted:#a9b8ca;--teal:#65e0c2;--line:rgba(183,204,225,.14);--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:radial-gradient(circle at 85% 3%,rgba(61,141,154,.13),transparent 27rem),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.7}
+a{color:inherit}.container{width:min(var(--max),calc(100% - 44px));margin:auto}.nav-wrap{position:sticky;top:0;z-index:10;background:rgba(11,20,36,.88);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+nav{min-height:72px;display:flex;align-items:center;justify-content:space-between}.brand{text-decoration:none;font:800 1rem Manrope;letter-spacing:.08em}.brand span,.eyebrow,.kicker,.project-type,.experience-meta{color:var(--teal)}
+.nav-links{display:flex;gap:24px;align-items:center}.nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:600}.nav-links a:hover{color:var(--teal)}.nav-cta{border:1px solid rgba(101,224,194,.45);padding:8px 14px;border-radius:99px;color:var(--teal)!important}
+.menu-btn{display:none;background:none;color:white;border:1px solid var(--line);border-radius:9px;padding:7px 11px;font-size:1.1rem}
+.hero{padding:94px 0 78px}.hero-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:55px;align-items:center}.eyebrow,.kicker,.project-type{font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+h1,h2,h3{font-family:Manrope;line-height:1.2}h1{font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:-.055em;margin:18px 0}h1 span{color:var(--teal)}h2{font-size:clamp(1.9rem,4vw,2.6rem);letter-spacing:-.04em;margin:8px 0 12px}h3{font-size:1.15rem}
+.hero-copy,.intro{color:var(--muted);max-width:690px;font-size:1.04rem}.actions,.chips,.contact-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}.btn{display:inline-flex;padding:11px 17px;border-radius:10px;text-decoration:none;font-weight:700;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--teal);color:#082126}.outline{border:1px solid var(--line);color:var(--text)}.chip{border:1px solid var(--line);border-radius:99px;padding:5px 10px;color:#d3e1ee;font-size:.78rem}
+.hero-card,.surface,.skill,.credential{background:rgba(19,34,57,.82);border:1px solid var(--line);border-radius:18px;padding:25px}.hero-card{box-shadow:0 18px 55px rgba(0,0,0,.2)}.small-label{color:#8295ab;font-size:.74rem;text-transform:uppercase;letter-spacing:.14em}.focus-title{font:800 1.4rem Manrope;margin:7px 0 17px}.focus-item{padding:11px 0;border-top:1px solid var(--line);font-size:.93rem}.focus-item:before{content:"";display:inline-block;width:8px;height:8px;background:var(--teal);border-radius:50%;margin-right:11px}
+section{padding:70px 0}.section-head{margin-bottom:30px;max-width:720px}.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.surface p,.credential p{color:var(--muted);margin:0}.principle{padding:10px 0;border-bottom:1px solid var(--line)}.principle:last-child{border:0}.principle strong{display:block}.principle span{color:var(--muted);font-size:.88rem}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:linear-gradient(160deg,#172b46,#101d30);transition:.25s}.project:hover{transform:translateY(-6px);border-color:rgba(101,224,194,.5)}.art{height:150px;padding:20px;display:flex;align-items:flex-end;background:linear-gradient(135deg,#17444b,#1a3152);font:800 2rem Manrope;letter-spacing:-.06em}.art.two{background:linear-gradient(135deg,#203b62,#164a4d)}.art.three{background:linear-gradient(135deg,#263653,#3b365f)}.project-body{padding:21px}.project-type{font-size:.68rem}.project h3{margin:8px 0 10px}.project p{color:var(--muted);font-size:.88rem;margin:0 0 13px}.project ul{list-style:none;padding:0;margin:0 0 18px}.project li{font-size:.81rem;color:#c5d3e2;padding:3px 0}.project li:before{content:"↗ ";color:var(--teal)}.project-link{color:var(--teal);font-weight:700;text-decoration:none;font-size:.9rem}.note{font-size:.79rem;color:#8295ab;margin-top:18px}
+.timeline{border-left:1px solid rgba(101,224,194,.4);margin-left:8px;padding-left:25px;display:grid;gap:25px}.job{position:relative}.job:before{content:"";position:absolute;left:-31px;top:7px;width:10px;height:10px;background:var(--teal);border-radius:50%;box-shadow:0 0 0 5px rgba(101,224,194,.1)}.experience-meta{font-size:.75rem;font-weight:700;letter-spacing:.06em}.job h3{margin:5px 0}.job p{color:var(--muted);margin:0;font-size:.91rem;max-width:850px}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.skill h3,.credential h3{font-size:1rem;margin:0 0 9px}.skill p{font-size:.84rem;color:var(--muted);margin:0}.credentials{display:grid;grid-template-columns:1fr 1fr;gap:15px}.credential p{font-size:.87rem}.contact{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:30px;border:1px solid rgba(101,224,194,.25);border-radius:20px;background:linear-gradient(110deg,rgba(20,63,67,.55),rgba(19,34,57,.9))}.contact p{color:var(--muted);max-width:600px;margin:0}
+footer{border-top:1px solid var(--line);padding:24px 0;color:#8295ab;font-size:.82rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.projects{grid-template-columns:repeat(2,1fr)}.skills{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.container{width:calc(100% - 32px)}.menu-btn{display:block}.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#0e1a2c;padding:20px 24px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.hero{padding:65px 0 48px}section{padding:52px 0}.projects,.skills,.about-grid,.credentials{grid-template-columns:1fr}.contact{display:block}.contact-actions{margin-top:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+</style>
 </head>
 <body>
-  <header data-aos="fade-down">
-    <h1>Shrief Harraz</h1>
-    <p>Data Analyst | SQL, Tableau, Excel | Insight-Driven Storytelling</p>
-  </header>
-
-  <section data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>
-      I'm a passionate data analyst with a background in retail and operations. I specialize in SQL, Tableau, and Excel to extract meaningful insights and drive data-informed decisions.
-    </p>
-  </section>
-
-  <section data-aos="fade-up">
-    <h2>My Journey</h2>
-    <div class="timeline-container">
-      <div class="timeline-step" onclick="toggleDetails(this)">
-        <h4>Studied Physical Education (2006–2010)</h4>
-        <p>Bachelor degree from Faculty of Physical Education, Mansoura University, Egypt.</p>
-      </div>
-      <div class="timeline-step" onclick="toggleDetails(this)">
-        <h4>Teacher (2010–2016)</h4>
-        <p>Worked as a Physical Education Teacher in Egypt.</p>
-      </div>
-      <div class="timeline-step" onclick="toggleDetails(this)">
-        <h4>Retail Supervisor in Dubai (2016–2022)</h4>
-        <p>Worked at Clarks Shoe Wear, managing retail teams and operations.</p>
-      </div>
-      <div class="timeline-step" onclick="toggleDetails(this)">
-        <h4>Google Data Analytics (2022)</h4>
-        <p>Completed the Google Data Analytics Professional Certificate.</p>
-      </div>
-      <div class="timeline-step" onclick="toggleDetails(this)">
-        <h4>Capi Electronics (2023)</h4>
-        <p>Worked in electronics retail operations and data monitoring.</p>
-      </div>
-      <div class="timeline-step" onclick="toggleDetails(this)">
-        <h4>Freelance Data Analyst (2023–Now)</h4>
-        <p>Working with various clients to analyze data and create dashboards.</p>
-      </div>
-    </div>
-  </section>
-
-  <section data-aos="fade-up">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card" data-aos="zoom-in">
-        <img src="images/cyclistic.png" alt="Cyclistic Project Cover">
-        <h3>Cyclistic Bike-Share Dashboard</h3>
-        <p>Analyzed user behavior using Tableau and provided insights to increase annual subscriptions.</p>
-        <div class="project-links">
-          <a href="https://github.com/ShriefHarraz/Google-casptone/blob/main/Cyclistic_Google_capstone.sql" target="_blank">GitHub</a>
-          <a href="https://public.tableau.com/app/profile/shrief.harraz/viz/CyclysticGooglecapstone/Startstations" target="_blank">View Viz</a>
-        </div>
-      </div>
-      <div class="project-card" data-aos="zoom-in">
-        <img src="images/covid.png" alt="COVID-19 Project Cover">
-        <h3>COVID-19 SQL + Tableau</h3>
-        <p>Cleaned and explored global COVID data with SQL, visualized key trends in Tableau.</p>
-        <div class="project-links">
-          <a href="https://github.com/ShriefHarraz/Covid-19-EXPLORATION/blob/main/covid_data_EXPLO.sql" target="_blank">GitHub</a>
-          <a href="https://public.tableau.com/app/profile/shrief.harraz/viz/Covid19dataExplorition/Dashboard1" target="_blank">View Viz</a>
-        </div>
-      </div>
-      <div class="project-card" data-aos="zoom-in">
-        <img src="images/lego.png" alt="LEGO Dataset Cover">
-        <h3>LEGO Dataset EDA</h3>
-        <p>Explored LEGO dataset to find top parts, colors, and themes using SQL & Tableau.</p>
-        <div class="project-links">
-          <a href="https://github.com/ShriefHarraz/LEGO-project-/blob/main/lego.sql" target="_blank">GitHub</a>
-        </div>
-      </div>
-      <div class="project-card" data-aos="zoom-in">
-        <img src="images/Clarks.png" alt="Clarks Pricing Cover">
-        <h3>Clarks Shop Pricing</h3>
-        <p>Investigated product price changes and sales trends using SQL analysis techniques.</p>
-        <div class="project-links">
-          <a href="https://github.com/ShriefHarraz/Clarks-dataset/blob/main/SQLQuery1.sql" target="_blank">GitHub</a>
-        </div>
-      </div>
-      <div class="project-card" data-aos="zoom-in">
-        <img src="images/Video games.png" alt="Video Games Cover">
-        <h3>Video Games Sales</h3>
-        <p>Analyzed video game sales using SQL and visualized key trends in Tableau.</p>
-        <div class="project-links">
-          <a href="https://github.com/ShriefHarraz/VideoGames_sales-/blob/main/VideoGame_Sales.sql" target="_blank">GitHub</a>
-          <a href="https://public.tableau.com/app/profile/shrief.harraz/viz/VideogamesGlobalsales/GlobalsalesDashboard" target="_blank">View Viz</a>
-        </div>
-      </div>
-      <div class="project-card" data-aos="zoom-in">
-        <img src="images/Sales.png" alt="Sales Dashboard Cover">
-        <h3>Sales Data Dashboard</h3>
-        <p>Created an interactive Tableau dashboard for sales performance and trends analysis.</p>
-        <div class="project-links">
-          <a href="https://github.com/ShriefHarraz/Sales-Analysis/blob/main/SQLQuery1.sql" target="_blank">GitHub</a>
-          <a href="https://public.tableau.com/app/profile/shrief.harraz/viz/SALESANALYSIS_16525219316490/SalesDashboard2" target="_blank">View Viz</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>You can reach me via:</p>
-    <div class="contact-links">
-      <a href="mailto:shrief.harraz@gmail.com" target="_blank">Email</a>
-      <a href="https://www.linkedin.com/in/shriefharraz/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/shriefharraz" target="_blank">GitHub</a>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Shrief Harraz. All rights reserved.
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, offset: 150 });
-    function toggleDetails(el) {
-      el.classList.toggle('active');
-    }
-  </script>
-</body>
-</html>
+<div class="nav-wrap"><nav class="container"><a class="brand" href="#home">SHRIEF<span>.</span></a><button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button><div class="nav-links" id="navLinks"><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#credentials">Credentials</a><a class="nav-cta" href="#contact">Contact</a></div></nav></div>
+<main>
+<header class="hero" id="home"><div class="container hero-grid"><div class="reveal"><div class="eyebrow">Retail Operations · Inventory · Supply Chain</div><h1>Turning Retail Data Into <span>Better Business Decisions.</span></h1><p class="hero-copy">I combine hands-on retail operations experience with data analytics to explore sales performance, improve inventory visibility, and support smarter operational decisions.</p><div class="actions"><a class="btn primary" href="#projects">Explore My Projects ↗</a><a class="btn outline" href="https://www.linkedin.com/in/shriefharraz/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></div><div class="chips"><span class="chip">Microsoft Excel</span><span class="chip">SQL / MySQL</span><span class="chip">Power BI</span><span class="chip">Tableau</span></div></div><aside class="hero-card reveal"><div class="small-label">Professional focus</div><div class="focus-title">From store operations to data insights.</div><div class="focus-item">Inventory & stock performance</div><div class="focus-item">Retail sales & profitability</div><div class="focus-item">Supply chain & logistics analysis</div><div class="focus-item">Operational KPI reporting</div></aside></div></header>
+<section id="about"><div class="container"><div class="section-head reveal"><div class="kicker">About me</div><h2>Business experience. Analytical mindset.</h2><p class="intro">A practical understanding of retail operations, supported by a growing toolkit in data analysis and visualization.</p></div><div class="about-grid"><div class="surface reveal"><p>I am a retail operations professional with over 10 years of experience across retail and airport retail environments. My work has involved sales performance, stock monitoring, inventory control, product availability, reporting, and supporting daily store operations.<br><br>I am building on this experience through hands-on projects in retail inventory, supply chain, and warehouse analytics. I use Excel, SQL, and business intelligence tools to organize data, investigate operational questions, and communicate useful insights.</p></div><div class="surface reveal"><div class="principle"><strong>01 · Operational understanding</strong><span>Real-world retail and stock-control experience.</span></div><div class="principle"><strong>02 · Structured analysis</strong><span>Turning raw data into meaningful KPIs and findings.</span></div><div class="principle"><strong>03 · Business focus</strong><span>Connecting analysis to availability, efficiency, and performance.</span></div></div></div></div></section>
+<section id="projects"><div class="container"><div class="section-head reveal"><div class="kicker">Selected work</div><h2>Featured analytics projects.</h2><p class="intro">Practical portfolio projects focused on the questions that matter in retail, inventory, supply chain, and logistics operations.</p></div><div class="projects">
+<article class="project reveal"><div class="art">01 / EXCEL</div><div class="project-body"><div class="project-type">Retail · Inventory · Sales</div><h3>Retail Inventory & Sales Performance Analysis</h3><p>Analyzed retail sales and inventory data to evaluate business performance, identify sales trends, and monitor stock availability. Used Excel, PivotTables, and KPI analysis to explore revenue, profit, margin, and inventory performance.</p><ul><li>Sales and profitability analysis</li><li>Product and category performance</li><li>Inventory turnover and stock availability</li><li>Location-based sales performance</li></ul><a class="project-link" href="https://github.com/ShriefHarraz/retail-inventory-sales-analysis-" target="_blank" rel="noopener noreferrer">View GitHub repository ↗</a></div></article>
+<article class="project reveal"><div class="art two">02 / SQL</div><div class="project-body"><div class="project-type">Supply Chain · Grocery Retail</div><h3>FreshMart Supply Chain Analysis</h3><p>Explored retail supply chain data across sales, products, inventory, demand, suppliers, and purchasing activities. Applied SQL techniques to investigate performance and support data-driven supply chain decisions.</p><ul><li>Sales and demand analysis</li><li>Inventory and stock movements</li><li>Supplier and purchase order performance</li><li>Product availability and replenishment</li></ul><a class="project-link" href="https://github.com/ShriefHarraz/freshmart-supply-chain-analysis" target="_blank" rel="noopener noreferrer">View GitHub repository ↗</a></div></article>
+<article class="project reveal"><div class="art three">03 / BI</div><div class="project-body"><div class="project-type">Warehouse · Logistics · BI</div><h3>Warehouse & Logistics Performance Analysis</h3><p>Used SQL and Power BI to explore order processing, warehouse operations, carrier performance, delivery efficiency, and logistics costs, with an interactive dashboard to monitor operational KPIs.</p><ul><li>Order processing performance</li><li>On-time delivery and delivery efficiency</li><li>Carrier and warehouse performance</li><li>Logistics cost analysis</li></ul><a class="project-link" href="https://github.com/ShriefHarraz/warehouse-logistics-performance-analysis" target="_blank" rel="noopener noreferrer">View GitHub repository ↗</a></div></article>
+</div><p class="note">Note: The Retail Inventory and FreshMart projects use simulated datasets for analytical practice. Project descriptions summarize the analysis scope and do not imply real client engagements.</p></div></section>
+<section id="experience"><div class="container"><div class="section-head reveal"><div class="kicker">Professional experience</div><h2>Experience built on the shop floor.</h2><p class="intro">Practical retail experience informs the business questions I explore through analytics.</p></div><div class="timeline">
+<article class="job reveal"><div class="experience-meta">AUG 2025 — PRESENT · ABU DHABI, UAE</div><h3>Senior Sales Assistant · Capi Lux Electronics – B&S Group</h3><p>Support daily airport retail operations, monitor stock availability and inventory movements, track sales and stock performance through Excel and internal reporting systems, and communicate product availability and replenishment needs.</p></article>
+<article class="job reveal"><div class="experience-meta">OCT 2023 — AUG 2025 · ABU DHABI, UAE</div><h3>Retail Assistant · Capi Lux Electronics – B&S Group</h3><p>Supported sales reporting, stock monitoring, product availability, and day-to-day store operations in a fast-paced international airport retail environment.</p></article>
+<article class="job reveal"><div class="experience-meta">JAN 2017 — AUG 2023 · UAE</div><h3>Retail Sales Supervisor · Clarks / Jashanmal Group</h3><p>Supervised daily retail operations and team activities, monitored sales performance, prepared reports and rosters using Excel, reviewed POS and inventory information, and supported sales targets and customer experience.</p></article>
+</div></div></section>
+<section id="skills"><div class="container"><div class="section-head reveal"><div class="kicker">Skills & tools</div><h2>Tools I use to investigate business performance.</h2></div><div class="skills">
+<div class="skill reveal"><h3>Microsoft Excel</h3><p>PivotTables, data cleaning, formulas, reporting, KPI tracking, and performance analysis.</p></div><div class="skill reveal"><h3>SQL / MySQL</h3><p>Data querying, joins, aggregations, CTEs, window functions, and business analysis.</p></div><div class="skill reveal"><h3>Power BI</h3><p>Dashboard development, data visualization, and operational KPI reporting.</p></div><div class="skill reveal"><h3>Tableau</h3><p>Interactive dashboards, visual storytelling, and communicating analytical findings.</p></div><div class="skill reveal"><h3>Inventory Analysis</h3><p>Stock monitoring, product availability, inventory movement, and turnover analysis.</p></div><div class="skill reveal"><h3>Retail Operations</h3><p>Sales performance, store operations, POS reporting, and customer-focused execution.</p></div><div class="skill reveal"><h3>Supply Chain</h3><p>Demand, purchasing, suppliers, replenishment, warehouse, and logistics analysis.</p></div><div class="skill reveal"><h3>Business Reporting</h3><p>Defining KPIs, interpreting trends, and translating data into practical observations.</p></div></div></div></section>
+<section id="credentials"><div class="container"><div class="section-head reveal"><div class="kicker">Education & credentials</div><h2>Continuous learning.</h2></div><div class="credentials">
+<div class="credential reveal"><h3>Google Data Analytics Professional Certificate</h3><p>Coursera · Data analytics foundations, analysis process, and visualization.</p></div><div class="credential reveal"><h3>Supply Chain Analytics Learning</h3><p>Coursera · Unilever Supply Chain Data Analyst learning content.</p></div><div class="credential reveal"><h3>AWS Cloud Practitioner Essentials</h3><p>Cloud fundamentals and core AWS concepts.</p></div><div class="credential reveal"><h3>Bachelor’s Degree — Physical Education / Sports Management</h3><p>Mansoura University, Egypt · 2006–2010.</p></div></div><p class="note">Additional learning: Data Analytics for Pricing Analyst in Excel (Udemy). English: IELTS C1. Arabic: Native. German: Elementary.</p></div></section>
+<section id="contact"><div class="container"><div class="contact reveal"><div><div class="kicker">Get in touch</div><h2>Let’s connect.</h2><p>I’m interested in opportunities related to Inventory Analysis, Inventory Planning, Supply Chain Analytics, and Retail Operations Analytics.</p></div><div class="contact-actions"><a class="btn primary" href="mailto:shrief.harraz@gmail.com">Email me ↗</a><a class="btn outline" href="https://www.linkedin.com/in/shriefharraz/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="btn outline" href="https://github.com/ShriefHarraz" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></div></section>
+</main>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> Shrief Harraz. All rights reserved.</span><span>Retail Operations · Inventory · Supply Chain Analytics</span></div></footer>
+<script>
+const menuBtn=document.getElementById("menuBtn"),navLinks=document.getElementById("navLinks");
+menuBtn.addEventListener("click",()=>{const open=navLinks.classList.toggle("open");menuBtn.setAttribute("aria-expanded",String(open));menuBtn.setAttribute("aria-label",open?"Close navigation":"Open navigation")});
+navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{navLinks.classList.remove("open");menuBtn.setAttribute("aria-expanded","false")}));
+document.getElementById("year").textContent=new Date().getFullYear();
+if("IntersectionObserver" in window){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll(".reveal").forEach(el=>observer.observe(el))}else{document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"))}
+</script>
+</body></html>
